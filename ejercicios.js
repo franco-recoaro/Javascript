@@ -9,9 +9,8 @@ function saludar(){
 //PEDIDO DEL CLIENTE//
 
 class listaDeStock {
-    constructor(nombre, precio, talles) {
+    constructor(nombre, talles) {
         this.nombre  = nombre;
-        this.precio  = parseInt(precio);
         this.talles = talles;
     }
 }
@@ -25,21 +24,21 @@ class listaDeCamisetas{
 }
 
 //ARRAYS//
-const productos = [];
+const carrito = [];
 const camisetasInt=[
     {
         club: "Borussia Dortmund",
-        precio: 10.000,
+        precio: 13000,
         talle: "S-M-L-XL"
     },
     {
         club: "Manchester City",
-        precio: 13.000,
+        precio: 13000,
         talle: "S-M"
-    }
+    },
     {
         club: "Manchester United",
-        precio: 13.000,
+        precio: 13000,
         talle: "S-M"
     }
 
@@ -58,12 +57,20 @@ while(camisetas!="SALIR"){
         case "Futbol Internacional":
         case "Futbol internacional":
         case "futbol internacional":
-            Internacional=new listaDeStock("Futbol Internacional", 10000, "TALLES S,M,L,XL");
+            Internacional=new listaDeStock("Futbol Internacional","TALLES S,M,L,XL");
             console.log ("El precio de las camisetas internacionales arranca desde $10.000");
-            precio=precio+10000;
             let consultaInt=prompt("Desea consultar las camisetas disponibles?");
             if (consultaInt=="si"){
-                console.table(camisetasInt)
+                for(let i=0;i<camisetasInt.length;i++){
+                    console.table(camisetasInt[i])
+                }
+                let compraInt=prompt("Que camiseta internacional desea elegir?");
+                if(compraInt=="Borussia Dortmund" || (compraInt=="Manchester City") || (compraInt=="Manchester United")){
+                carrito.push(compraInt)
+                precio=precio+13000
+            }else{
+                    console.log("Disculpa, la camiseta que has seleccionado no se encuentra en stock")
+                }
             }else{
                alert("No hay problema, te devolvemos al menu principal para que puedas elegir tu mejor opcion");
             }
@@ -72,7 +79,7 @@ while(camisetas!="SALIR"){
         case "Futbol Nacional":
         case "Futbol nacional":
         case "futbol nacional":
-            camisetaNacional= new listaDeStock("Futbol nacional", 8000,"TALLES S,M,L,XL");
+            camisetaNacional= new listaDeStock("Futbol nacional","TALLES S,M,L,XL");
             console.log ("El precio de las camisetas nacionales arranca desde $8.000");
             precio=precio+8000;
             let talleNac="talles" in camisetaNacional;
@@ -87,7 +94,7 @@ while(camisetas!="SALIR"){
 
         case "Selecciones":
         case "selecciones":
-            camisetaSelecciones= new listaDeStock("Selecciones", 12000, "TALLES M,L");
+            camisetaSelecciones= new listaDeStock("Selecciones","TALLES M,L");
             console.log ("El precio de las camisetas de seleccion arranca desde $12.000");
             precio=precio+12000;
             let talleSelec="talles" in  camisetaSelecciones;
@@ -124,10 +131,5 @@ while(camisetas!="SALIR"){
     camisetas=prompt("Que camiseta queres comprar?\nFutbol internacional\nFutbol Nacional\nSelecciones\nVersiones Retro\n(Escribir SALIR para volver al menu)")
 }
 
-//DETALLES DE LOS PRODUCTOS//
-
-console.table(productos);
-
-
 //TOTAL A PAGAR//
-console.log("Has seleccionado los siguientes articulos: "+this.nombre+"\nTotal a pagar $"+precio);
+console.log("Has realizado la compra con exito\nTotal a pagar: $ "+precio+"\nHas comprado la camiseta: "+carrito)
