@@ -195,3 +195,5 @@ for(const camiseta of camisetas){
             console.table(carrito)
 }
 }
+
+//
