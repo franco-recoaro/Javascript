@@ -6,24 +6,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link href="./estilo.css" rel="stylesheet">
     <title>MikiShirt</title>
 </head>
  
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg bg-light">
+        <nav class="navbar navbar-expand-lg bg-dark">
             <div class="container-fluid d-flex justify-content-end align-items-end">
-              <a class="navbar-brand" href="#">Mikishirt</a>
+              <a class="navbar-brand text-white" href="index.html">Mikishirt</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
               <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNav">
                 <ul class="navbar-nav">
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                    <a class="nav-link active text-white" aria-current="page" href="#">Inicio</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">FAQ</a>
+                    <a class="nav-link text-white" href="#">FAQ</a>
                   </li>
                   <li>
                     </li>
@@ -35,35 +36,37 @@
 
 
 
-    <main id="principal" class="m-4">
+    <main id="principal">
         <article>
-            <h1 id="titulo" class="d-flex justify-content-center">MikiShirt</h1>
-            <p>Encontrá las mejores camisetas acá!</p>
+            <h1 id="titulo" class="d-flex justify-content-center text-center p-3 text-white">MikiShirt</h1>
+            <p class="d-flex justify-content-center text-center p-0">Encontrá las mejores camisetas acá!</p>
         </article>
 
         <!--NAV BAR CAMISETAS-->
 
         <section>
-          <nav class="navbar navbar-expand-lg bg-light">
+          <nav class="navbar navbar-expand-lg bg-dark">
             <div class="container-fluid d-flex justify-content-end align-items-end">
               <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNav">
                 <ul class="navbar-nav">
 
                                       <!-- BOTONES NAV FILTRO -->
-
                   <li class="nav-item">
-                    <button id="botonNac" class="nav-link border-0 bg-light">Nacionales</button>
+                    <button id="botonCatalogo" class="nav-link border-0 bg-dark text-white p-3">Catalogo</button>
                   </li>
                   <li class="nav-item">
-                    <button id="botonInt" class="nav-link border-0 bg-light" href="#">Internacionales</button>
+                    <button id="botonNac" class="nav-link border-0 bg-dark text-white p-3">Nacionales</button>
                   </li>
                   <li class="nav-item">
-                    <button id="botonRetro" class="nav-link border-0 bg-light" href="#">Retro</button>
+                    <button id="botonInt" class="nav-link border-0 bg-dark text-white p-3" href="#">Internacionales</button>
+                  </li>
+                  <li class="nav-item">
+                    <button id="botonRetro" class="nav-link border-0 border- bg-dark text-white p-3 me-1" href="#">Retro</button>
                   </li>
 
                     <!-- Button MODAL -->
-                    <button id="carrito" type="button" class="btn btn-primary bg-light border-0" data-bs-toggle="modal" data-bs-target="#exampleModal">      
-                    <img src="./imagenes/carrito.png" width="35px">
+                    <button id="carrito" type="button" class="btn btn-primary bg-light border-0 p-3" data-bs-toggle="modal" data-bs-target="#exampleModal">      
+                    <img src="./imagenes/carrito.png" width="25px" style="background-color: white;">
                     </button>
                     <!-- MODAL -->
 
@@ -76,9 +79,10 @@
                           </div>
                           <div id="modalCarrito" class="modal-body">
                           </div>
+                          <div id="precioTotal" class="d-flex justify-content-end justify-items-end m-2 fs-4"></div>
                           <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                            <button type="button" class="btn btn-primary">Guardar cambios</button>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Volver al Inicio</button>
+                            <button type="button" class="btnComprar btn-primary">Realizar compra</button>
                           </div>
                         </div>
                       </div>
@@ -91,8 +95,12 @@
         </section>
         <br>
 
+        <article id="filtros" class="row d-flex justify-content-center align-items-center">
 
-        <article id="cartas" class="row">
+        </article>
+
+        <article id="cartas" class="row d-flex justify-content-center align-items-center" >
+          <h2 class="d-flex justify-content-center p-2">Todos nuestros Productos!</h2>
             <!-- CARTAS -->
         </article>
     </main>
@@ -103,4 +111,6 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 <script src="camisetas.js"></script>
 <script src="script2.js"></script>
+<script src="botonesFiltro.js"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </html>

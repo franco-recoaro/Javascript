@@ -14,7 +14,7 @@ class listaDeCamisetas{
 const camisetas=[
     {
         ID: 1,
-        club: "Borussia Dortmund",
+        club: "Borussia Dortmund Home 2022/23",
         precio: 16000,
         talle: "S-M-L-XL",
         imagen: "./imagenes/borussia.jpg",
@@ -22,7 +22,7 @@ const camisetas=[
     },
     {
         ID: 2,
-        club: "Manchester City",
+        club: "Manchester City Home 2022/23",
         precio: 16000,
         talle: "S-M",
         imagen: "./imagenes/manchestercity.png",
@@ -30,7 +30,7 @@ const camisetas=[
     },
     {
         ID: 3,
-        club: "Manchester United",
+        club: "Manchester United Home 2022/23",
         precio: 17000,
         talle: "S-M",
         imagen: "./imagenes/manchesterunited.jpg",
@@ -38,7 +38,7 @@ const camisetas=[
     },
     {
         ID: 4,
-        club: "Everton",
+        club: "Everton Home 2022/23",
         precio: 15000,
         talle: "S-M",
         imagen: "./imagenes/everton.jpg",
@@ -46,7 +46,7 @@ const camisetas=[
     },
     {
         ID: 5,
-        club: "Boca Juniors",
+        club: "Boca Juniors Home 2022/23",
         precio: 12000,
         talle: "S-M",
         imagen: "./imagenes/boca.jpg",
@@ -54,7 +54,7 @@ const camisetas=[
     },
     {
         ID: 6,
-        club: "River Plate",
+        club: "River Plate Home 2022/23",
         precio: 12000,
         talle: "S-M",
         imagen: "./imagenes/river.jpg",
@@ -63,7 +63,7 @@ const camisetas=[
     },
     {
         ID: 7,
-        club: "Talleres",
+        club: "Talleres Home 2022/23",
         precio: 11000,
         talle: "S-M",
         imagen: "./imagenes/talleres.jpg",
@@ -72,7 +72,7 @@ const camisetas=[
     },
     {
         ID: 8,
-        club: "Rosario Central",
+        club: "Rosario Central Away 2022/23",
         precio: 11000,
         talle: "S-M",
         imagen: "./imagenes/rosario.jpg",
@@ -80,7 +80,7 @@ const camisetas=[
     },
     {
         ID: 9,
-        club: "Real Madrid",
+        club: "R.Madrid Retro Temporada 2012/13",
         precio: 19000,
         talle: "S-M-L-XL",
         imagen: "./imagenes/realmadrid.jpg",
@@ -88,7 +88,7 @@ const camisetas=[
     },
     {
         ID: 10,
-        club: "Barcelona",
+        club: "Barcelona Retro Temporada 2019",
         precio: 19000,
         talle: "S-M",
         imagen: "./imagenes/barcelona.jpg",
@@ -97,7 +97,7 @@ const camisetas=[
     },
     {
         ID: 11,
-        club: "Celtic",
+        club: "Celtic Retro Temporada 1988",
         precio: 21000,
         talle: "S-M",
         imagen: "./imagenes/celtic.jpg",
@@ -105,7 +105,7 @@ const camisetas=[
     },
     {
         ID: 12,
-        club: "Liverpool",
+        club: "Liverpool Retro Temporada 1996",
         precio: 22000,
         talle: "S-M",
         imagen: "./imagenes/liverpool.jpeg",
